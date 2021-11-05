@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #0a0a0a;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 70%;
+  margin: auto;
+  background-color: #c5acda;
+  display: flex;
+  align-items: flex-end;
+  perspective: 500px;
+	border: 4px solid #fff;
+	box-shadow: unset 6px 3px 10px rgba(250, 250, 250, 0.4);
+}
+
+.table {
+  position: absolute;
+  background: #ab97bd;
+  width: 100%;
+  height: 90px;
+  bottom: 0;
+}
+
+.item {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left top;
+}
+
+#lamp {
+  background-image: url("/images/table/lamp.png");
+  width: 200px;
+  height: 250px;
+  bottom: 15px;
+  left: 122px;
+}
+
+#plant {
+  background-image: url("/images/table/plant.png");
+  width: 152px;
+  height: 125px;
+  bottom: 13px;
+  left: 154px;
+}
+
+#coffee {
+  background-image: url("/images/table/coffee.png");
+  width: 100px;
+  height: 100px;
+  bottom: -8px;
+  left: 366px;
+}
+
+#apple {
+  background-image: url("/images/table/apple.png");
+  width: 59px;
+  height: 62px;
+  bottom: 27px;
+  left: 346px;
+}
+
+#monitor {
+  display: block;
+  width: 250px;
+  height: 460px;
+  position: relative;
+  box-shadow: 16px 2px 10px rgb(0 0 0 / 40%);
+  perspective: 500px;
+  transform-origin: top center;
+  cursor: pointer;
+  bottom: 60px;
+  left: 475px;
+  transform: rotateX(3.5deg);
+  z-index: 1;
+}
+
+#monitor-content {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(https://i.pinimg.com/originals/d4/e1/5a/d4e15a97effa49a8dce93655df87a52d.gif);
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset 6px 3px 10px rgba(0, 0, 0, 0.4);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border: 6px solid #e7e4df;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#monitor-content::before {
+	position: absolute;
+	content: "CLICK ME";
+	font-family: 'Roboto Mono', monospace;
+	color: #e7e4df;
+	font-weight: bold;
+	letter-spacing: 4px;
+	font-size: 10px;
+	text-align: center;
+	bottom: 0;
+	z-index: 2;
+	transition: all 0.5s ease;
+	padding: 18px 0;
+	opacity: 1;
+}
+
+#monitor:hover #monitor-content::before {
+	color: #fff;
+}
+
+#sculpture {
+  background-image: url("/images/table/sculpture.png");
+  width: 66px;
+  height: 114px;
+  bottom: 55px;
+  right: 225px;
+}
+
+#books {
+  background-image: url("/images/table/books.png");
+  width: 200px;
+  height: 210px;
+  bottom: 6px;
+  right: 49px;
+}
+
+#bird {
+  background-image: url("/images/table/bird.png");
+  width: 61px;
+  height: 79px;
+  bottom: 199px;
+  right: 143px;
+}
+
+#atom {
+  background-image: url("/images/room/atom.png");
+  width: 150px;
+  height: 120px;
+  top: 100px;
+  left: 49px;
+}
+
+#atom::before {
+  position: absolute;
+  content: "";
+  width: 1.5px;
+  height: 108px;
+  left: 75.5px;
+  top: -100px;
+  background-color: #ccc;
+  box-shadow: 1px 0px 10px #9fa4a1;
+}
+
+#clock {
+  background-image: url("/images/room/clock.png");
+  width: 108px;
+  height: 138px;
+  top: 205px;
+  right: 286px;
+}
